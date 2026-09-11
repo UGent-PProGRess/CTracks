@@ -1,0 +1,105 @@
+[build-system]
+requires = [
+    "setuptools>=65",
+    "wheel",
+    "setuptools_scm[toml]>=7"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctrex"
+dynamic = ["version"]
+description = "CTrex tracking framework with modular plugins (CTracks, Dyrect)"
+readme = "README.md"
+authors = [
+    { name = "Wannes Goethals" },
+    { name = "Robert van der Merwe" },
+    { name = "Karel Desplenter" }
+]
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "pandas",
+    "scipy",
+    "tifffile",
+    "pillow",
+    "scikit-image",
+    "tensorboard<=2.16.2",  # metrics_dict for hparams does not show for higher versions of tensorboard
+    "lightning",
+    "six <= 1.16.0",
+    "torchmetrics",
+    "gitdb",
+]
+
+# Optional dependencies
+[project.optional-dependencies]
+
+dev = [
+    "pytest",
+#    "black",
+    "mypy",
+    "ruff",
+]
+
+cpu = [
+    "torch",
+    "cupy"
+]
+
+# Everything the scripts/particle_tracking analysis and visualization scripts need on
+# top of the base install: classical particle linking (trackpy, laptrack, byotrack),
+# 3D visualization (pyvista), and TIFF-stack reading (pims). Not required just to run
+# the reconstruction itself (see the "installation" test in tests/test_ctracks).
+particle-tracking = [
+    "trackpy",
+    "laptrack",
+    "byotrack",
+    "pyvista",
+    "pims",
+    "psutil",
+    "scikit-learn",
+]
+
+# CLI entrypoints
+[project.scripts]
+ctrex-run = "ctrex.apps.run_pipeline:main"
+ctracks-run = "ctrex.apps.run_ctracks:main"
+dyrect-run = "ctrex.apps.run_dyrect:main"
+
+# setuptools config for src layout
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Automatic versioning from git
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+write_to = "src/ctrex/_version.py"
+
+# Optional: formatting / linting tools
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+ignore_missing_imports = true
+
+# Optional pytest config
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+markers = [
+    "slow: slower, more thorough integration tests - deselect with `-m \"not slow\"` for a quick run",
+]

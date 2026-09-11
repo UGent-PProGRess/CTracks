@@ -1,0 +1,23 @@
+# If you don't want to use the GPU, run this in the command line to use the base requirements in pyproject.toml
+# this installs ctrex as an editable package, so linking directly to the source code.
+# >>> pip install -e .[cpu]
+#
+# If you want to use the packages that worked for this commit with CUDA integration, install cuda (following readme.md)
+# and run these two lines
+# >>> pip install -r requirements.txt
+# >>> pip install -e .
+numpy
+matplotlib
+seaborn
+pandas
+scipy
+tifffile
+pillow
+scikit-image
+tensorboard<=2.16.2  # metrics_dict for hparams does not show for higher versions of tensorboard
+lightning
+six <= 1.16.0
+torchmetrics
+gitdb
+cupy-cuda12x
+torch~=2.7.1+cu128  # python -m pip install torch==2.7.1+cu128 --index-url https://download.pytorch.org/whl/cu128 --no-cache
