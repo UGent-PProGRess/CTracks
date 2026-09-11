@@ -7,6 +7,7 @@ CTracks tracks tracer particles through dynamic micro-CT scans to recover fluid 
 * `src/ctracks`: builds on `ctrex` to add tracer particles as a dynamic sample feature — projecting, tracking, and post-processing their motion through a scan.
 * `scripts/particle_tracking`: reconstruction and analysis scripts that drive `ctracks`/`ctrex` end-to-end — simulating tracer motion, reconstructing scans, and analyzing/visualizing the resulting tracks.
 
+Archived on Zenodo: [![DOI](https://zenodo.org/badge/1366402682.svg)](https://doi.org/10.5281/zenodo.22712231)
 
 # Usage
 =======
