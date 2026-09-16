@@ -1,5 +1,12 @@
 # CTracks
 
+Direct trajectory reconstruction framework for XPTV. Robert van der Merwe (Robert.vanderMerwe@UGent.be), Ghent University Centre for X-ray Tomography ([UGCT](https://www.ugent.be/we/ugct/en)) & Pore-Scale Processes in Geomaterials Research Team ([PProGRess](https://pprogress.ugent.be/)).  
+Funded by the European Research Council (ERC) under the **[FLOWSCOPY](https://cordis.europa.eu/project/id/101116228)** project (Grant Agreement No. 101116228).  
+**Preprint:** [arXiv:2609.16838](https://arxiv.org/abs/2609.16838)   
+**PLEASE CITE FOLLOWING PUBLICATION:**  
+Robert van der Merwe, Wannes Goethals, Sharon Ellman, Sojwal Manoorkar, Jan Aelterman, Matthieu N. Boone, Tom Bultreys. *Direct Trajectory Reconstruction for Fast 3D X-ray Particle Tracking Velocimetry in Porous Media*. arXiv:2609.16838 (2026).
+
+----------------------------------------------------------
 CTracks tracks tracer particles through dynamic micro-CT scans to recover fluid flow velocity fields.
 
 
@@ -10,7 +17,6 @@ CTracks tracks tracer particles through dynamic micro-CT scans to recover fluid 
 Archived on Zenodo: [![DOI](https://zenodo.org/badge/1366402682.svg)](https://doi.org/10.5281/zenodo.22712231)
 
 # Usage
-=======
 
 After installation (see below), create a python script in the folder scripts/ and run it.
 The most convenient way is to copy an existing file that does what you need to do and adjust where necessary.
