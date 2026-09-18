@@ -1,6 +1,6 @@
 # CTracks
 
-Direct trajectory reconstruction framework for XPTV. Robert van der Merwe (Robert.vanderMerwe@UGent.be), Ghent University Centre for X-ray Tomography ([UGCT](https://www.ugent.be/we/ugct/en)) & Pore-Scale Processes in Geomaterials Research Team ([PProGRess](https://pprogress.ugent.be/)).  
+Direct trajectory reconstruction framework for XPTV. Robert van der Merwe (Robert.vanderMerwe@UGent.be), Tom Bultreys (Tom.Bultreys@UGent.be), Ghent University Centre for X-ray Tomography ([UGCT](https://www.ugent.be/we/ugct/en)) & Pore-Scale Processes in Geomaterials Research Team ([PProGRess](https://pprogress.ugent.be/)).  
 Funded by the European Research Council (ERC) under the **[FLOWSCOPY](https://cordis.europa.eu/project/id/101116228)** project (Grant Agreement No. 101116228).  
 **Preprint:** [arXiv:2609.16838](https://arxiv.org/abs/2609.16838)   
 **PLEASE CITE FOLLOWING PUBLICATION:**  
